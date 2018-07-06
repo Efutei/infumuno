@@ -6,5 +6,12 @@
   <body>
     <h1>Infumuno</h1>
     <p>単語を入力すると母音が同じアイドルを出力します。</p>
+      
+    <%= form_tag("/", method: "get") do %>
+      <%= label_tag(:q, "単語(ひらがな):") %>
+      <%= text_field_tag(:q) %>
+      <%= submit_tag("送信") %>
+    <% end %>
+    <%= @result %>
   </body>
 </html>
